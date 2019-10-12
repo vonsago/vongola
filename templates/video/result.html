@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>可用链接</title>
+</head>
+<body>
+{% if url_list %}
+    <ul>
+    {% for url in url_list %}
+        <li><a href="{{ url }}/">跳转链接 如果不能播放请换用，这么多链接呢( •̀ω•́ )σ</a></li></ul>
+        </br>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+</body>
+</html>

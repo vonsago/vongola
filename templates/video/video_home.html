@@ -1,0 +1,9 @@
+<h1>输入vip视频url</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="/video/" method="post">
+    {% csrf_token %}
+    输入vip视频url：{{ form.your_url }}
+    <input type="submit" value="Submit">
+</form>

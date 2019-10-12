@@ -1,0 +1,15 @@
+version : '2'
+services:
+    websit:
+        image: vonsago/websit:dev1
+        user: root
+    nginx:
+        image: nginx
+        command: nginx -g "daemon off;"
+        ports:
+          - 8000:80
+        user: root
+        volumes:
+          - ./nginx.conf:/etc/nginx/nginx.conf 
+        depends_on:
+          - websit
